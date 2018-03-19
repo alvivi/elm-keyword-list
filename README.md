@@ -1,5 +1,5 @@
 
-# elm-nested-list
+# elm-keyword-list
 
 A list of values of any type, which can also be lists.
 
@@ -25,17 +25,17 @@ solve this issue using `List (List any)` or `List (Maybe any)`, like this:
                 ]
             )
 
-Using `NestedList`, the above code will look like this:
+Using `KeywordList`, the above code will look like this:
 
     myView : Bool -> Html msg
     myView isHidden =
         Html.div []
-            (NestedList.fromMany
-                [ NestedList.one (Html.text "Always visible")
-                , NestedList.one (Html.text "Always visible")
-                , NestedList.ifTrue isHidden (Html.text "Maybe visible")
-                , NestedList.ifFalse isHidden (Html.text "Maybe not visible")
-                , NestedList many
+            (KeywordList.fromMany
+                [ KeywordList.one (Html.text "Always visible")
+                , KeywordList.one (Html.text "Always visible")
+                , KeywordList.ifTrue isHidden (Html.text "Maybe visible")
+                , KeywordList.ifFalse isHidden (Html.text "Maybe not visible")
+                , KeywordList many
                     [ Html.text "Even nested list, without calling again fromMany"
                     ]
                 ]
@@ -44,8 +44,8 @@ Using `NestedList`, the above code will look like this:
 
 ## A Note About Performance
 
-This library optimizes converting `NestedList` back to a list in linear
-time. Here is a benchmark comparing using `NestedList` against using `List` and
+This library optimizes converting `KeywordList` back to a list in linear
+time. Here is a benchmark comparing using `KeywordList` against using `List` and
 `List.concat`.
 
-![Benchmark](https://raw.githubusercontent.com/alvivi/elm-nested-list/master/assets/elm-nested-list-benchmark.png)
+![Benchmark](https://raw.githubusercontent.com/alvivi/elm-keyword-list/master/assets/elm-keyword-list-benchmark.png)
