@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "summary": "A list of values of any type, which can also be lists.",
+    "repository": "https://github.com/alvivi/elm-keyword-list.git",
+    "license": "BSD-3-Clause",
+    "source-directories": [
+        "src"
+    ],
+    "exposed-modules": [
+        "KeywordList"
+    ],
+    "dependencies": {
+        "elm-lang/core": "5.0.0 <= v < 6.0.0"
+    },
+    "elm-version": "0.18.0 <= v < 0.19.0"
+}
