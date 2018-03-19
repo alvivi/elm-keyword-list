@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "summary": "A list of values of any type, which can also be lists.",
     "repository": "https://github.com/alvivi/elm-keyword-list.git",
     "license": "BSD-3-Clause",
